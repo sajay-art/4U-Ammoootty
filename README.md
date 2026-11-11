@@ -1,21 +1,23 @@
-# 4U Ammoootty v2
+# 4U Ammoootty v3
 
-Mobile-friendly Flask media link detector and authorized media converter.
+## What works
+- Direct public audio/video file URL fetching (100 MB limit) and MP4/MP3 conversion.
+- Upload local audio/video files (200 MB limit) and convert to MP4/MP3.
+- Temporary files are deleted after processing/delivery.
+- SSRF protections: public HTTP(S) hosts only, DNS/IP checks, redirect revalidation, no local/private network targets.
 
-## Features
-- Detects YouTube, Instagram, Facebook, TikTok, X/Twitter, Vimeo and other URLs.
-- Converts user-uploaded authorized video/audio files to MP4 or MP3 with FFmpeg.
-- Temporary input/output files; upload limit 200 MB.
-- Docker + Render Blueprint deployment.
+## Social platform links
+YouTube, Instagram, Facebook, TikTok, X and Vimeo post URLs are not direct media-file URLs. This app does not extract arbitrary social posts or bypass DRM, login/private-account controls, or platform restrictions. Use platform-authorized export/download options for media you own or are authorized to process, then upload the file here.
 
-## Important
-This project detects platform URLs but does not extract arbitrary social-platform videos. A detected URL is not proof that third-party downloading is allowed. Use official platform download/export tools or upload media you own or are authorized to process. It does not bypass DRM, private-account restrictions, or platform controls.
+## Deploy update to existing Render service
+1. Extract this ZIP on your phone.
+2. In the existing GitHub repository, replace files with these versions while preserving paths.
+3. Commit to `main`.
+4. Render should auto-deploy. If not, service > Manual Deploy > Deploy latest commit.
+5. Check `/api/health`.
 
-## Deploy update
-1. Replace the corresponding files in your existing GitHub repository with these files.
-2. Commit the changes to `main`.
-3. Render should automatically deploy the new commit. If not, open the service and choose Manual Deploy > Deploy latest commit.
-4. Test `/api/health`, link detection and MP4/MP3 conversion.
+## Local
+Install Python 3.10+, FFmpeg, then `pip install -r requirements.txt` and `python app.py`.
 
-## Local run
-Install FFmpeg and Python 3.10+, then `pip install -r requirements.txt` and `python app.py`.
+## Limits
+Free Render instances can sleep and have limited CPU, RAM, request duration and bandwidth. This is a starter, not unlimited production hosting.
