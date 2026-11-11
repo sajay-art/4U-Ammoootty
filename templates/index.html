@@ -1,42 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#090d18"><meta name="description" content="4U Ammoootty — media link detection and MP4/MP3 conversion for authorized media.">
-<title>4U Ammoootty — Media Studio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-<div class="ambient a1"></div><div class="ambient a2"></div>
-<header class="topbar"><a class="brand" href="#"><span class="brand-mark">4U</span><span>Ammoootty<span class="dot">.</span></span></a><nav><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="nav-cta" href="#downloader">Get started <span>↗</span></a></nav><button class="menu" aria-label="Open menu">☰</button></header>
-<main>
-<section class="hero">
-<div class="eyebrow"><span class="pulse"></span> YOUR PERSONAL MEDIA STUDIO</div>
-<h1>One link.<br><span>One simple place.</span></h1>
-<p class="hero-copy">Recognize popular media links, then convert media you own or are authorized to use into the format you need.</p>
-<div class="hero-actions"><a class="primary-btn" href="#downloader">Try 4U Ammoootty <span>↓</span></a><span class="trust"><span>✓</span> Free to use · No sign-up</span></div>
-<div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="format-card card-video"><div class="file-icon purple">▶</div><div><b>VIDEO</b><small>MP4 · H.264</small></div><span class="mini-check">✓</span></div><div class="format-card card-audio"><div class="file-icon orange">♫</div><div><b>AUDIO</b><small>MP3 · High quality</small></div><span class="mini-check">✓</span></div><div class="center-disc"><div class="disc-inner">4U<span>✳</span></div></div><div class="spark s1">✦</div><div class="spark s2">✧</div></div>
-</section>
-<section class="converter-section" id="downloader">
-<div class="section-heading"><div class="eyebrow">UNIVERSAL LINK DETECTOR</div><h2>Paste a media link.</h2><p>We'll identify the platform and show you the supported next step.</p></div>
-<div class="converter">
-<div class="link-entry"><label for="mediaUrl">MEDIA URL</label><div class="url-row"><input id="mediaUrl" type="url" placeholder="Paste YouTube, Instagram, TikTok, Facebook link…" autocomplete="url"><button class="convert-btn" id="detectBtn">Detect link <span>→</span></button></div></div>
-<div id="detectResult" class="detect-result" aria-live="polite"></div>
-<div class="or-divider"><span>OR CONVERT A FILE</span></div>
-<div class="dropzone" id="dropzone"><input id="fileInput" type="file" accept="video/*,audio/*,.mkv,.mov,.webm,.m4a,.aac,.ogg" hidden>
-<div class="upload-symbol">↑</div><h3>Drop your media file here</h3><p>or <button class="browse" id="browse">browse files</button> from your device</p><span class="file-limit">MP4, MOV, MKV, WEBM, MP3, WAV · Up to 200 MB</span><div class="selected-file" id="selectedFile"></div></div>
-<div class="convert-bottom"><div class="format-select"><label for="format">OUTPUT FORMAT</label><select id="format"><option value="mp4">MP4 Video</option><option value="mp3">MP3 Audio</option></select></div><button class="convert-btn" id="convertBtn" disabled>Convert & download <span>→</span></button></div>
-<div class="progress-wrap" id="progressWrap"><div class="progress-label"><span id="progressText">Preparing your file…</span><span id="progressPct">0%</span></div><div class="progress-track"><div id="progressBar"></div></div></div>
-<div class="notice" id="notice" role="status"></div>
-<div class="privacy"><span>♢</span> Files are processed temporarily and deleted after conversion.</div>
-</div>
-<div class="platform-note"><span class="note-icon">ⓘ</span><p><b>Platform link support</b><br>Recognizing a link does not mean the platform permits third-party downloading. For social-platform content, use official download/export tools or obtain an authorized media file, then convert it here. This service does not bypass DRM, private-account restrictions, or platform controls.</p></div>
-</section>
-<section class="how" id="how"><div class="section-heading"><div class="eyebrow">SIMPLE WORKFLOW</div><h2>Three easy steps.</h2></div><div class="steps"><article><span>01</span><div class="step-icon">↗</div><h3>Paste a link</h3><p>We identify YouTube, Instagram and other supported platform URLs.</p></article><article><span>02</span><div class="step-icon">↥</div><h3>Get your media</h3><p>Use the platform's official export or download option for authorized content.</p></article><article><span>03</span><div class="step-icon">⇄</div><h3>Convert & save</h3><p>Upload the authorized file and convert it to MP4 or MP3.</p></article></div></section>
-<section class="faq" id="faq"><div class="section-heading"><div class="eyebrow">GOOD TO KNOW</div><h2>Frequently asked.</h2></div><details><summary>Can I download any YouTube or Instagram link?</summary><p>No. This website detects popular platform links, but does not extract arbitrary platform media. Use official platform download/export features or media you have permission to process.</p></details><details><summary>Which platforms are detected?</summary><p>YouTube, Instagram, Facebook, TikTok, X/Twitter, Vimeo and other websites.</p></details><details><summary>Can I convert to MP4 and MP3?</summary><p>Yes. Upload a supported media file and choose MP4 video or MP3 audio.</p></details><details><summary>Are my files stored?</summary><p>Uploaded source files are removed after processing, and generated output is removed after it is sent. Avoid uploading sensitive files to a public server.</p></details></section>
-</main>
-<footer><a class="brand" href="#"><span class="brand-mark">4U</span><span>Ammoootty<span class="dot">.</span></span></a><p>Made for your media workflow. Use responsibly.</p><span>© 2026 4U Ammoootty</span></footer>
-<script src="/static/app.js"></script>
-</body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090d18"><title>4U Ammoootty — Media Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/static/style.css"></head><body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">4U</span><span>Ammoootty<span class="dot">.</span></span></a><nav><a href="#how">How it works</a><a href="#faq">FAQ</a></nav></header>
+<main><section class="hero"><div class="eyebrow">YOUR PERSONAL MEDIA STUDIO</div><h1>Media made<br><span>simple.</span></h1><p class="hero-copy">Convert and download media files you own or are authorized to use. Paste a direct media URL or upload a file.</p><div class="hero-actions"><a class="primary-btn" href="#downloader">Start now ↓</a><span class="trust">Free to use · No account</span></div></section>
+<section class="converter-section" id="downloader"><div class="section-heading"><div class="eyebrow">MEDIA DOWNLOADER & CONVERTER</div><h2>Paste a direct media link</h2><p>Direct audio/video file URLs are supported. Social post links are recognized but cannot be extracted here.</p></div>
+<div class="converter"><div class="link-entry"><label for="mediaUrl">DIRECT MEDIA URL</label><input id="mediaUrl" type="url" placeholder="https://example.com/video.mp4" autocomplete="url"></div>
+<div class="convert-bottom"><div class="format-select"><label for="urlFormat">OUTPUT FORMAT</label><select id="urlFormat"><option value="mp4">MP4 Video</option><option value="mp3">MP3 Audio</option></select></div><button class="convert-btn" id="urlDownload">Download media →</button></div>
+<div class="notice" id="urlNotice" role="status"></div>
+<div class="or-divider"><span>OR UPLOAD A MEDIA FILE</span></div>
+<div class="dropzone" id="dropzone"><input id="fileInput" type="file" accept="video/*,audio/*,.mkv,.mov,.webm,.m4a,.aac,.ogg" hidden><div class="upload-symbol">↑</div><h3>Choose a video or audio file</h3><p>or <button class="browse" id="browse">browse your phone</button></p><span class="file-limit">MP4, MOV, MKV, WEBM, MP3, WAV · Up to 200 MB</span><div class="selected-file" id="selectedFile"></div></div>
+<div class="convert-bottom"><div class="format-select"><label for="fileFormat">OUTPUT FORMAT</label><select id="fileFormat"><option value="mp4">MP4 Video</option><option value="mp3">MP3 Audio</option></select></div><button class="convert-btn" id="convertBtn" disabled>Convert & download →</button></div>
+<div class="progress-wrap" id="progressWrap"><div class="progress-label"><span id="progressText">Processing…</span><span id="progressPct">0%</span></div><div class="progress-track"><div id="progressBar"></div></div></div><div class="notice" id="fileNotice"></div><div class="privacy">Files are processed temporarily and deleted after delivery.</div></div>
+<div class="platform-note"><b>Platform note</b><p>YouTube, Instagram, Facebook, TikTok, X and similar post links are not direct media files. Use official platform export/download features for content you own or are authorized to use. This site does not bypass DRM, private-account controls or platform restrictions.</p></div></section>
+<section class="how" id="how"><div class="section-heading"><div class="eyebrow">SIMPLE WORKFLOW</div><h2>Three steps.</h2></div><div class="steps"><article><span>01</span><h3>Paste a direct link</h3><p>Use a direct public audio/video file URL.</p></article><article><span>02</span><h3>Choose a format</h3><p>Select MP4 video or MP3 audio.</p></article><article><span>03</span><h3>Download</h3><p>We'll fetch and convert the file for you.</p></article></div></section>
+<section class="faq" id="faq"><div class="section-heading"><div class="eyebrow">GOOD TO KNOW</div><h2>FAQ</h2></div><details><summary>Can I paste a YouTube or Instagram post link?</summary><p>The site identifies popular social URLs but cannot extract arbitrary posts. Use official download/export options for your own or authorized content, then upload the file for conversion.</p></details><details><summary>What direct links work?</summary><p>Public links that point directly to audio/video files, do not require login, and permit downloading. Some servers block automated requests.</p></details><details><summary>What are the limits?</summary><p>Direct URL downloads are limited to 100 MB. Uploads are limited to 200 MB. Render free instances can have memory, time and bandwidth limits.</p></details></section></main>
+<footer><a class="brand" href="#"><span class="brand-mark">4U</span><span>Ammoootty<span class="dot">.</span></span></a><p>Use responsibly. Only download media you are allowed to use.</p><span>© 2026 4U Ammoootty</span></footer><script src="/static/app.js"></script></body></html>
