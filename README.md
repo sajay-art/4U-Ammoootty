@@ -1,41 +1,21 @@
-# 4U Ammoootty
+# 4U Ammoootty v2
 
-A responsive media conversion website. Users upload media they own or are authorized to process and convert it to MP4 or MP3.
+Mobile-friendly Flask media link detector and authorized media converter.
 
 ## Features
-- Responsive dark interface
-- Upload by browse or drag-and-drop
-- MP4 video and MP3 audio conversion using FFmpeg
-- Temporary source/output files
-- Flask API and health endpoint
-- Docker deployment
+- Detects YouTube, Instagram, Facebook, TikTok, X/Twitter, Vimeo and other URLs.
+- Converts user-uploaded authorized video/audio files to MP4 or MP3 with FFmpeg.
+- Temporary input/output files; upload limit 200 MB.
+- Docker + Render Blueprint deployment.
 
-## Important scope
-This starter does **not** download/extract media from YouTube, Instagram, or other social-platform URLs. Use official platform export/download tools or upload content you own or have permission to process. Do not use this project to bypass DRM, private-account controls, or platform restrictions.
+## Important
+This project detects platform URLs but does not extract arbitrary social-platform videos. A detected URL is not proof that third-party downloading is allowed. Use official platform download/export tools or upload media you own or are authorized to process. It does not bypass DRM, private-account restrictions, or platform controls.
 
-## Run locally
-1. Install Python 3.10+ and FFmpeg.
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run: `python app.py`
-4. Open `http://localhost:5000`
+## Deploy update
+1. Replace the corresponding files in your existing GitHub repository with these files.
+2. Commit the changes to `main`.
+3. Render should automatically deploy the new commit. If not, open the service and choose Manual Deploy > Deploy latest commit.
+4. Test `/api/health`, link detection and MP4/MP3 conversion.
 
-## Deploy free (initial launch)
-1. Push this folder to a GitHub repository.
-2. Create a Render account and choose **New > Blueprint**.
-3. Connect the repository; Render detects `render.yaml` and builds the Docker image.
-4. Wait for deployment and open the generated `onrender.com` URL.
-
-Free hosting has limits. Render free services may sleep when idle, and ephemeral storage is not persistent. Large uploads/conversions may exceed free-tier request, memory, CPU, or time limits. This is suitable for a demo, not guaranteed unlimited public service.
-
-## Production checklist
-- Add rate limiting and abuse protection.
-- Add per-IP quotas and stricter upload limits.
-- Use a persistent job queue/object storage for larger workloads.
-- Configure HTTPS and a custom domain.
-- Review platform terms and copyright obligations.
-- Do not upload confidential media to a public instance.
-
-## Configuration
-- `PORT`: server port (default 5000)
-- `FFMPEG_BINARY`: FFmpeg executable path (default `ffmpeg`)
-- Upload limit: 200 MB in `app.py`
+## Local run
+Install FFmpeg and Python 3.10+, then `pip install -r requirements.txt` and `python app.py`.
