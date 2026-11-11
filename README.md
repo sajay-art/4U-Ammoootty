@@ -1,23 +1,19 @@
-# 4U Ammoootty v3
+# 4U Ammoootty v4
 
-## What works
-- Direct public audio/video file URL fetching (100 MB limit) and MP4/MP3 conversion.
-- Upload local audio/video files (200 MB limit) and convert to MP4/MP3.
-- Temporary files are deleted after processing/delivery.
-- SSRF protections: public HTTP(S) hosts only, DNS/IP checks, redirect revalidation, no local/private network targets.
+A Flask + yt-dlp media downloader interface with preview, MP4 quality selection, audio extraction, background jobs and progress.
 
-## Social platform links
-YouTube, Instagram, Facebook, TikTok, X and Vimeo post URLs are not direct media-file URLs. This app does not extract arbitrary social posts or bypass DRM, login/private-account controls, or platform restrictions. Use platform-authorized export/download options for media you own or are authorized to process, then upload the file here.
+## Important use restrictions
+Only download media you own or are authorized to save, or media that is lawfully available for download. Respect platform terms and copyright. This hosted build intentionally does not accept browser cookies, account credentials, or support private/age-restricted/DRM-protected content. Website support depends on yt-dlp and can change.
 
-## Deploy update to existing Render service
-1. Extract this ZIP on your phone.
-2. In the existing GitHub repository, replace files with these versions while preserving paths.
+## Deploy to the existing Render service
+1. Extract this ZIP.
+2. Replace the files in your existing GitHub repository `sajay-art/4U-Ammoootty`, preserving folder paths.
 3. Commit to `main`.
-4. Render should auto-deploy. If not, service > Manual Deploy > Deploy latest commit.
-5. Check `/api/health`.
+4. Render should deploy the new commit. If not, choose Manual Deploy > Deploy latest commit.
+5. Test `https://fouru-ammoootty.onrender.com/api/health` and look for version `4.0`.
 
-## Local
-Install Python 3.10+, FFmpeg, then `pip install -r requirements.txt` and `python app.py`.
+## Runtime
+Docker installs FFmpeg and Deno. yt-dlp is installed from its current default extra dependency set. Render free instances have limited CPU, memory, disk, request time and bandwidth and may sleep. Large media jobs may fail. The local downloads folder is ephemeral on free hosting and can be cleared on restart/redeploy.
 
-## Limits
-Free Render instances can sleep and have limited CPU, RAM, request duration and bandwidth. This is a starter, not unlimited production hosting.
+## Local test
+Install Docker and run `docker build -t 4u-ammoootty .` then `docker run -p 10000:10000 4u-ammoootty`.
